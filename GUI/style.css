@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.root-container
+{
+    height: 130vh;
+    width:100%;
+    background-color: #011627;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.intro
+{
+    height: 15%;
+    width: 100%;
+}
+.intro-title
+{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    border-bottom: 1px solid white;
+}
+.intro-team
+{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid white;
+}
+.project-topic
+{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.team-chunk
+{
+    height: 100%;
+    width: 300px;
+}
+.team-memeber
+{
+    height: 33%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.temp-container
+{
+    height: 42%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 1px solid white;
+
+}
+.water-container
+{
+    height: 42%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.graph-entry
+{
+    font-size: 1.3rem;
+}
