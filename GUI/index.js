@@ -1,18 +1,16 @@
 let  xValues = [10,20,30,40,50,60,70];
-let  yValues = [5,6,7,8,2,3,4];
+let  yValues = [0,0,0,0,0,0,0];
 
 
 let secondxValues = [10,20,30,40,50,60,70]
-let secondyValues = [5,6,7,8,2,3,4];
-
+let secondyValues = [0,0,0,0,0,0,0];
 
 let refetchFiles = (who)=>{
-  console.log("refetch file");
   fetch(who)
   .then(response => response.text())
   .then((text) => {
+    console.log(text)
       let str_arr = text.split('\n')
-
       if(str_arr.length > 10)
         str_arr = str_arr.slice(-9)
 
@@ -21,6 +19,7 @@ let refetchFiles = (who)=>{
       let numbers = str_arr.map((el)=>{
       return Number(el)
       })
+      console.log(numbers);
       let increment = 5;
       let index = -1;
       let x_axis = numbers.map((el)=>{
@@ -29,19 +28,14 @@ let refetchFiles = (who)=>{
       })
             if(who == 'Temperatura.txt')
             {
-                    yValues = numbers
-                  xValues = x_axis
+              yValues = numbers
+              xValues = x_axis
             }
             else
             {
-            console.log("ELSE:",numbers)
-                secondyValues = numbers
-                secondxValues = x_axis
+              secondyValues = numbers
+              secondxValues = x_axis
             }
-
-
-      console.log("after:", yValues)
-
   })
 
 }
@@ -65,7 +59,7 @@ new Chart("myChart", {
  options: {
    legend: {display: false},
    scales: {
-     yAxes: [{ticks: {min: 0, max:10}}],
+     yAxes: [{ticks: {min: 0, max:60}}],
    },
 animation: {
 duration: 0
@@ -88,7 +82,7 @@ new Chart("myChart2", {
      options: {
        legend: {display: false},
        scales: {
-         yAxes: [{ticks: {min: 0, max:10}}],
+         yAxes: [{ticks: {min: 0, max:60}}],
        },
     animation: {
     duration: 0
@@ -96,4 +90,4 @@ new Chart("myChart2", {
      }
     });
 
-},1000)
+},2000)
